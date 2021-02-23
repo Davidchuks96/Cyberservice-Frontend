@@ -1,0 +1,161 @@
+<!-- <img src="/assets/img/single_user.png" class="mx-auto d-block">
+<form #form='ngForm' class="mb-4" autocomplete="off" (submit)="onSubmit(form)">
+ <div class="form-group">
+   <label class="code">Username</label>
+   <input class="form-control" #UserName="ngModel" name="UserName" [(ngModel)]="formModel.UserName" required>
+ </div>
+ <div class="form-group">
+   <label>Password</label>
+   <input type="password" class="form-control" #Password="ngModel" name="Password" [(ngModel)]="formModel.Password" required>
+ </div>
+ <div class="form-row">
+   <div class="form-group col-md-8 offset-md-2">
+     <button type="submit" class="btn btn-lg btn-block" [disabled]="form.invalid">Login</button>
+   </div>
+ </div>
+</form> -->
+<style>
+ .rectangle1{
+    position: absolute;
+width: 347px;
+height: 56px;
+left: 58px;
+top: 75px;
+right: 59px;
+
+background: #FFFFFF;
+border: 1px solid #DADADA;
+box-sizing: border-box;
+border-radius: 3px;
+
+  }
+  .rectangle2{
+position: absolute;
+width: 347px;
+height: 56px;
+left: 58px;
+top: 175px;
+right: 59;
+
+background: #FFFFFF;
+border: 1px solid #DADADA;
+box-sizing: border-box;
+border-radius: 3px;
+  }
+
+  .rectangle4{
+position: absolute;
+width: 347px;
+height: 56px;
+left: 58px;
+top: 300px;
+right: 59;
+
+background: #89BAFF;
+border: 1px solid #DADADA;
+box-sizing: border-box;
+border-radius: 5px;
+  }
+
+  .signup{
+position: absolute;
+width: 64px;
+height: 20px;
+left: 141px;
+top: 20px;
+right: 142px;
+
+font-family: serif;
+font-style: normal;
+text-decoration-color: mintcream;
+font-weight: 500;
+text-decoration-color: #FFFFFF;
+font-size: 18px;
+line-height: 20px;
+color: #FFFFFF;
+  }
+
+  .username{
+position: absolute;
+width: 73px;
+height: 20px;
+left: 58px;
+top: 50px;
+
+font-family: serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 143% */
+
+
+color: #2A2A2A;
+
+}
+.password{
+position: absolute;
+width: 68px;
+height: 20px;
+left: 58px;
+top: 150px;
+
+font-family: serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 143% */
+color: #2A2A2A;
+
+}
+.forget{
+position: absolute;
+width: 265px;
+height: 20px;
+left: 58px;
+top: 380px;
+
+font-family: serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 143% */
+color: #2A2A2A;
+
+}
+input{
+  padding: 12px 20pxf
+}
+input::placeholder{
+  position: relative;
+  padding: 30px;
+}
+.card{
+    position: absolute;
+    width: 464px;
+    height: 450px;
+    left: 0px;
+    top:161px;
+    bottom: 207px;
+}
+.container{
+  position: relative;
+  left: 71px;
+  top: 10px;
+  }
+</style>
+
+<div class="card">
+<form #form='ngForm' class="mb-4" autocomplete="off" (submit)="onSubmit(form)">
+  <div class="username">Username</div>
+<div class="password">Password</div>
+<input placeholder="Enter Username" class="rectangle1" #UserName="ngModel" name="UserName" [(ngModel)]="formModel.UserName" required/>
+<input placeholder="Enter Password" class="rectangle2" type="password" #Password="ngModel" name="Password" [(ngModel)]="formModel.Password" required/>
+<button class="rectangle4" type="submit" [disabled]="form.invalid">
+  <a class="signup" >Sign up</a>
+</button>
+  <div class="forget">Don't have an account? Register here</div>
+  </form>
+</div>

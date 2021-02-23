@@ -1,0 +1,132 @@
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<style>
+  .flexcontainer{
+    width:75%;
+    margin-left:20%;
+    margin-top: 45px;
+  }
+  .managecontainer{
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 100px;
+    background-color: white;
+   
+  }
+  input{
+    position: relative;
+width: 760px;
+height: 56px;
+left: 80px;
+top: 40px;
+
+background: #FFFFFF;
+border: 1px solid #DADADA;
+box-sizing: border-box;
+border-radius: 50px;
+
+  }
+  input::placeholder{
+  position: relative;
+  padding: 30px;
+}
+ .card{
+
+	margin: 10px;
+	padding: 10px;
+    width:284px;
+    text-align:center;
+    text-decoration-color: black;
+    height:140px;
+      background: #FFFFFF;
+      border: 0.25px solid #DADADA;
+      box-shadow: 0px 2px 10px rgba(42, 42, 42, 0.1);
+      border-radius: 5px;
+  } 
+.grid1{
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+  flex-direction: row-reverse;
+	margin-top: 80px;
+  color:white;
+  margin-bottom: 5px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+}
+  .trash{
+    text-align: right;
+    margin-bottom: 0
+  }
+  .manage{
+    position: absolute;
+    width: 157px;
+    height: 20px;
+    left: 279px;
+    top: 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #89BAFF;
+  }
+  .fa{
+    background-color: #89BAFF;
+    width:2.5em;
+    height: 1.0em;
+   
+  }
+  #title{
+	text-align: center;
+	max-height: 20px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-bottom: 50px;
+  font-size:1.2em;
+  color: #89BAFF;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+
+
+#hr{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-bottom: 45px;
+  color:  #89BAFF;
+}
+</style>
+<div class="manage">Manage Service</div>
+<div class="flexcontainer">
+   <input placeholder="Search" />
+<div class="managecontainer">
+    <div class="card"><a id="title">Vehicle</a>
+  <hr id="hr">
+    <div class="grid1">
+      <div> <i class="fa fa-plus" routerLink='/home/Vehicleservice' routerLinkActive='active'></i></div> 
+    <div> <i class="fa fa-eye"></i></div> 
+    </div>
+    </div>
+      <div class="card" *ngFor="let emp of overalllist"><a id="title">
+          {{emp.Name}}
+        </a>
+        <hr id="hr">
+        <div class="grid1">
+         <div><i class="fa fa-trash" (click)="DeleteService(emp.overallServiceId)" ></i> </div> 
+          <div> <i class="fa fa-plus" [routerLink]="['/home/add-individualService',emp.overallServiceId]" routerLinkActive='active'></i></div> 
+          <div> <i class="fa fa-eye"></i></div> 
+        </div>
+     </div>
+</div> 
+</div>
+
+

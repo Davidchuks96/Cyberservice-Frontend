@@ -1,0 +1,124 @@
+<style>
+  .vehicle_container{
+    position: absolute;
+    left: 304px;
+    top: 70px;
+    color: #89BAFF;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  
+  input{
+    position: absolute;
+  top: 55px;
+  height: 33px;
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width:450px;
+  }
+  label{
+  position:absolute ;
+  height: 19px;
+  left: 0px;
+  top: 37px;
+  font-family: serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(13, 14, 15)
+  }
+  
+  .input2{
+  position: absolute;
+  top: 55px;
+  left: 516px;
+  height: 33px;
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width:450px;
+  
+  }
+  .label2{
+  position:absolute ;
+  width: 150px;
+  height: 19px;
+  left: 516px;
+  top: 37px;
+  font-family: serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(11, 13, 15)
+  
+  }
+  ::placeholder{
+    position: relative;
+    padding: 30px;
+    font-size: 10px;
+    line-height: 21px;
+    color: #54617A;
+  }
+  button{
+    position: absolute;
+    top: 450px;
+    left: 270px;
+    width: 467px;
+    height: 40px;
+    background: #89BAFF;
+  border-radius: 3px;
+  color: white
+  }
+  </style>
+  
+  
+  <div class="vehicle_container">
+    <h5 id="page_title">Create new vehicle service</h5>
+  <form #form='ngForm' (ngSubmit)="Register(Data)"> 
+    <label for="vehiclename">Vehicle Name</label>
+    <input type="text" placeholder="Item Name" vehiclename="Vehiclename" name=Vehiclename required [(ngModel)]='Data.VehicleName' #VehicleName="ngModel">
+  
+    <label for="RegNo" style="top: 100px">RegNo</label>
+    <input style="top: 120px" type="text" placeholder="Number" RegNo="RegNo" name=RegNo required [(ngModel)]='Data.RegNo' #RegNo="ngModel">
+  
+    <label class="label2" style="top: 100px" for="Officers">Officers</label>
+    <input class="input2" style="top: 120px" Officers="Officers" name=Officers required [(ngModel)]='Data.Officers' #Officers="ngModel">
+  
+    <label class="label2" for="Vehicletype">Vehicle Type</label>
+    <input class="input2" Vehicletype="VehicleType" name=VehicleType required [(ngModel)]='Data.VehicleType' #VehicleType="ngModel">
+  
+    <label for="VehicleLicenseIssuedDate" style="top: 165px">Vehicle License Issued Date</label>
+    <input type="Date"style="top: 185px" VehicleLicenseIssuedDate="VehicleLicenseIssuedDate" name=VehicleLicenseIssuedDate required [(ngModel)]='Data.VehicleLicenseIssuedDate' #VehicleLicenseIssuedDate="ngModel">
+  
+    <label class="label2" style="top: 165px" for="VehicleLicenseExpirationDate">Vehicle License Expired</label>
+    <input  class="input2" type="Date" style="top: 185px"  VehicleLicenseExpirationDate="VehicleLicenseExpirationDate" name=VehicleLicenseExpirationDate required [(ngModel)]='Data.VehicleLicenseExpirationDate' #VehicleLicenseExpirationDate="ngModel">
+  
+    <label for="IssuranceIssuedDate" style="top: 230px">Issurance Issued Date</label>
+    <input type="Date" style="top: 250px"  IssuranceIssuedDate="IssuranceIssuedDate" name=IssuranceIssuedDate required [(ngModel)]='Data.IssuranceIssuedDate' #IssuranceIssuedDate="ngModel">
+  
+    <label class="label2" style="top: 230px" for="IssuranceExpirationDate">Issurance Expired Date</label>
+    <input class="input2" style="top: 250px"    type="Date" IssuranceExpirationDate="IssuranceExpirationDate" name=IssuranceExpirationDate required [(ngModel)]='Data.IssuranceExpirationDate' #IssuranceExpirationDate="ngModel">
+  
+    <label for="RoadWorthinessIssuedDate" style="top: 295px">Road Worthiness Issued Date</label>`
+    <input type="Date" style="top: 315px"  RoadWorthinessIssuedDate="RoadWorthinessIssuedDate" name=RoadWorthinessIssuedDate required [(ngModel)]='Data.RoadWorthinessIssuedDate' #RoadWorthinessIssuedDate="ngModel">
+  
+    <label class="label2" style="top: 295px" for="RoadWorthinessExpirationDate">Road Worthiness Expired </label>
+    <input class="input2" style="top: 315px"   type="Date" RoadWorthinessExpirationDate="RoadWorthinessExpirationDate" name=RoadWorthinessExpirationDate required [(ngModel)]='Data.RoadWorthinessExpirationDate' #RoadWorthinessExpirationDate="ngModel" >
+  
+    <label for="HackneyPermitIssuedDate" style="top: 360px">Hackney Permit Issued Date</label>
+    <input type="Date" style="top: 380px"   HackneyPermitIssuedDate="HackneyPermitIssuedDate" name=HackneyPermitIssuedDate required [(ngModel)]='Data.HackneyPermitIssuedDate' #HackneyPermitIssuedDate="ngModel"> 
+  
+    <label class="label2" style="top: 360px" for=" HackneyPermitExpirationDate">Hackney Permit Expired</label>
+    <input class="input2" style="top: 380px"    type="Date"   HackneyPermitExpirationDate="HackneyPermitExpirationDate" name=HackneyPermitExpirationDate required [(ngModel)]='Data.HackneyPermitExpirationDate' #HackneyPermitExpirationDate="ngModel">
+   <hr>
+    <button type="submit">Create</button>
+  </form> 
+  </div>
+  
+  

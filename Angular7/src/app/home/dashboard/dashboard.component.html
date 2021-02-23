@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .box1{
+      position: absolute;
+      left: 20%;
+      right: 64.51%;
+      top: 13.28%;
+      bottom: 73.44%;
+      height:140px;
+      background: #FFFFFF;
+      border: 0.25px solid #DADADA;
+      box-shadow: 0px 2px 10px rgba(42, 42, 42, 0.1);
+      border-radius: 5px;
+  }
+  .box2{
+    position: absolute;
+    left: 38.06%;
+    right: 46.46%;
+    top: 13.28%;
+    height:140px;
+    bottom: 73.44%;
+    background: #FFFFFF;
+    border: 0.25px solid #DADADA;
+    box-shadow: 0px 2px 10px rgba(42, 42, 42, 0.1);
+    border-radius: 5px;
+  }
+  .plusContainer{
+    width: 100%;
+    text-align: center
+  }
+  .dashboard{
+    position: absolute;
+    width: 157px;
+    height: 20px;
+    left: 279px;
+    top: 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #89BAFF;
+  }
+  .btn {
+    
+  background-color:white;
+  border: none;
+ 
+  font-style: 2px solid #89BAFF;
+  line-height: 50px;
+  padding: 12px 16px;
+  font-size: 70px;
+  cursor: pointer;
+  float:center;
+ 
+}
+.btn:hover {
+  background-color: RoyalBlue;
+}
+.plus{
+  font-size: 70px;
+  color:#89BAFF ;
+  
+  
+
+}
+.service{
+  position: relative;
+ text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+color: #868686;
+margin-top: 15px;
+
+}
+.image{
+  width:100%;
+text-align: center;
+margin:auto;
+margin-top: 37px;
+}
+
+</style>
+<div class="dashboard">Dashboard</div>
+<div class="box1">
+    <!-- <button class="btn"><i class="fa fa-plus"></i></button> -->
+    <div class="image" >
+       <img routerLink='/home/add-service' routerLinkActive='active' src="/assets/img/plus.svg"/>
+    </div>
+    <div class="service">Add Service</div>
+</div>
+<div class="box2">
+  <div class="image">
+    <img routerLink='/home/Manage-service' routerLinkActive='active' src="/assets/img/Group 2.svg"/>
+  </div> 
+  <div class="service">Manage Service</div>
+</div>

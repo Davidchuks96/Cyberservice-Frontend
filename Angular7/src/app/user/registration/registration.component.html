@@ -1,0 +1,237 @@
+<style>
+
+  .rectangle1{
+      position: absolute;
+  width: 347px;
+  height: 56px;
+  left: 58px;
+  top: 75px;
+  right: 59px;
+  
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 3px;
+  
+    }
+  
+    .rectangle2{
+  position: absolute;
+  width: 347px;
+  height: 56px;
+  left: 58px;
+  top: 175px;
+  right: 59;
+  
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 3px;
+    }
+    .rectangle3{
+      position: absolute;
+  width: 347px;
+  height: 56px;
+  left: 58px;
+  top: 275px;
+  right: 59;
+  
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 3px;
+    }
+    .rectangle5{
+      position: absolute;
+  width: 347px;
+  height: 56px;
+  left: 58px;
+  top: 375px;
+  right: 59;
+  
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 3px;
+    }
+    .rectangle6{
+      position: absolute;
+  width: 347px;
+  height: 56px;
+  left: 58px;
+  top: 475px;
+  right: 59;
+  
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 3px;
+    }
+    .rectangle4{
+      position: absolute;
+  width: 347px;
+  height: 56px;
+  left: 58px;
+  top: 600px;
+  right: 59;
+  
+  background: #89BAFF;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 5px;
+    }
+    .signup{
+      position: absolute;
+  width: 64px;
+  height: 20px;
+  left: 141px;
+  top: 20px;
+  right: 142px;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #FFFFFF;
+    }
+    .fullname{
+      position: absolute;
+  width: 73px;
+  height: 20px;
+  left: 58px;
+  top: 250px;
+  font-family: serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2A2A2A;
+    }
+    .password{
+      position: absolute;
+  width: 73px;
+  height: 20px;
+  left: 58px;
+  top: 350px;
+  font-family: serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2A2A2A;
+    }
+    .confirmpassword{
+      position: absolute;
+  width: 150px;
+  height: 20px;
+  left: 58px;
+  top: 450px;
+  font-family: serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2A2A2A;
+    }
+    .username{
+    position: absolute;
+  width: 73px;
+  height: 20px;
+  left: 58px;
+  top: 50px;
+  font-family: serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2A2A2A;
+  }
+  .email{
+    position: absolute;
+  width: 68px;
+  height: 20px;
+  left: 58px;
+  top: 150px;
+  
+  font-family: serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 143% */
+  
+  
+  color: #2A2A2A;
+  
+  }
+  .forget{
+    position: absolute;
+  width: 265px;
+  height: 20px;
+  left: 58px;
+  top: 380px;
+  
+  font-family: serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 143% */
+  
+  
+  color: #2A2A2A;
+  
+  }
+  input{
+    padding: 12px 20pxf
+  }
+  input::placeholder{
+    position: relative;
+    padding: 30px;
+  }
+  .card{
+  position: absolute; 
+  width: 464px;
+  height: 680px;
+  left: 0px;
+  top:161px;
+  bottom: 207px;
+  }
+  .container{
+  position: relative;
+  left: 71px;
+  
+  }
+  
+  </style>
+    <div class="card">
+      <form  [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">  
+          <div>
+      <label class="username">Username</label>
+      <input placeholder="Enter Username" class="rectangle1 form-control"  formControlName="UserName"/>
+      <label class="text-danger" *ngIf="service.formModel.get('UserName').touched && service.formModel.get('UserName').errors?.required">This
+        field is mandatory.</label>
+      </div>
+      <div>
+        <label class="email">Email</label>
+      <input placeholder="Enter Email" class="rectangle2 form-control"  formControlName="Email"/>
+      <label class="text-danger" *ngIf="service.formModel.get('Email').touched && service.formModel.get('Email').errors?.email">Invalid
+        email address.</label>
+      </div>
+      <label class="fullname">Fullname</label>
+      <input placeholder="Enter FullName" class="rectangle3 form-control"  formControlName="FullName"/>
+      <div formGroupName="Passwords">
+          <div class=" required">
+      <label class="password">Password</label>
+      <input placeholder="Enter Password" class="rectangle5 form-control" type="password"  formControlName="Password"/>
+      <label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.required">This
+          field is mandatory.</label>
+        <label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.minlength">Minimum
+          11 characters required.</label>
+        </div>
+     
+        <div class=" required">
+          <label class="confirmpassword">Confirm Password</label>
+          <input placeholder="Enter ConfirmPassword" class="rectangle6 form-control" type="password"  formControlName="ConfirmPassword"/>
+          <label class="text-danger" *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.required">This
+              field is mandatory.</label>
+            <label class="text-danger" *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.passwordMismatch">Confirm
+              Password does not match.</label>
+            </div>
+          </div>
+          <button class="rectangle4" type="submit" [disabled]="!service.formModel.valid">
+        <a class="signup" >Sign up</a>
+      </button>
+        </form>
+      </div>
